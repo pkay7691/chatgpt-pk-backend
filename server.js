@@ -24,7 +24,7 @@ app.use(bodyParser.json())
 
 
 
-const port = 3080
+const port = process.env.PORT || 3040
 
 app.post('/',  async (req, res) => {
   const {message} = req.body
