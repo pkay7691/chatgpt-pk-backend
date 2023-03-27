@@ -26,6 +26,10 @@ app.use(bodyParser.json())
 
 const port = 3080
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 app.post('/',  async (req, res) => {
   const {message} = req.body
   console.log(message, 'message')
